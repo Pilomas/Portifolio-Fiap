@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+header{
+    height: 100vh;
+    background-image: url('../images/Hero.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 21rem 11rem;
+}
+
+h1{
+    font-family: 'poppins';
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+span{
+    font-family: 'montserrat';
+    font-size: 4.5rem;
+    
+}
+
+.botao{
+    padding: 1.4rem 11rem;
+    background: linear-gradient(90deg, #6A3093 0%, #A044FF, 100%);
+    border-radius: 10px;
+
+}
+
+#secao-projetos{
+    background-color: #212121;
+    color:var(--color-default);
+}
+#secao-projetos ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+.card{
+    position: relative;
+    cursor:pointer;
+}
+.card:hover .card-image{
+    opacity: .2;
+}
+
+.card:hover .card-info{
+    opacity: 1;
+    top: 150px;
+}
+
+.card-image img{
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.card-info{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity .7s ease-in-out, bottom .7s;
+}
+
+#secao-orcamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:black;
+}
+
+#secao-orcamento form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: start;
+    row-gap: 1rem;
+    padding: 2rem;
+    background-color:#fff;
+    border: radius 10px;
+    position: relative;
+}
+#secao-orcamento output{
+    grid-column: 2;
+}
+
+#secao-orcamento h3{
+    position: absolute;
+    position: top -10%;
+    background-color: #6A3093;
+    color: #fff;
+}
+
+input[type="number"]{
+    padding: .5rem;
+    background-color: #212121;
+    color: var(--color-default);
+    border: none;
+    border-radius: .3rem;
+}
