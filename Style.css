@@ -107,6 +107,8 @@ span{
     top: 0;
     opacity: 0;
     transition: opacity .7s ease-in-out, bottom .7s;
+    color:var(--font-default);
+    z-index: 10;
 }
 
 #secao-orcamento{
