@@ -18,9 +18,9 @@ function CalcularOrcamento(){
     if(Serverless.checked) preco+=400
     if(Ctrl3.checked) outuput.innerHTML="R$"+preco.toFixed(2)+" + R$50.00 Mensais"
 
-    let prazo = document.querySelector("#prazo").value
-    preco+=preco*(1.1 - prazo*0.1)
-    label_prazo.innerhtml="Prazo ("+prazo+"semanas)"
+    let taxaDeUrgencia = preco * (1.1-prazo.value * 0.1)
+    preco += taxaDeUrgencia
+    label_prazo.innerhtml=`Prazo (${prazo.value} semanas)`
 
     output.innerHTML ="R$"+preco.toFixed(2)
 
