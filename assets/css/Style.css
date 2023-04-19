@@ -8,7 +8,7 @@
 
 
 :root{
-    font-size: 62.5%; /*10px / 16px */
+    font-size: 62.5%; 
     --font-default: 'Montserrat';
     --font-heading: 'Poppins';
     --color-default: #FFF;
@@ -23,7 +23,7 @@ body{
     font-family: var(--font-default);
 }
 
-.hamburger{
+.hamburguer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,6 +35,7 @@ body{
     z-index: 11;
     cursor: pointer;
 }
+
 .linha{
     height: .5rem;
     width: 100%;
@@ -46,7 +47,7 @@ body{
     height: 100vh;
     width: 20rem;
     position: fixed;
-    right: -200px;
+    right: -20rem;
     background-color: white;
     z-index: 9;
     transition:right 1s;
@@ -95,7 +96,7 @@ header{
 h1{
     font-family: 'poppins';
     font-weight: 900;
-    font-size: 6rem;
+    font-size: clamp(3rem, 5vw, 6rem); /*5% da altura da tela, sendo 3rem o min e 6rem o max*/
     margin-bottom: 1rem;
 }
 
@@ -133,12 +134,12 @@ section {
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    animation: zoom 10s ease-in-out;
+    animation: zoom 5s ease-in-out;
 }
 
 @keyframes zoom{
     0%{
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
     100%{
         transform: scale(1);
@@ -226,16 +227,21 @@ section {
     background-color:#fff;
     border: radius 10px;
     position: relative;
+    font-size: 1.6rem;
 }
+
 #secao-orcamento output{
     grid-column: 2;
 }
 
 #secao-orcamento h3{
     position: absolute;
-    position: top -10%;
+    top: -10%;
+    left: 1rem;
     background-color: #6A3093;
-    color: #fff;
+    color: #FFF;
+    padding: .7rem;
+    border-radius: 5px;
 }
 
 input[type="number"]{
@@ -245,4 +251,17 @@ input[type="number"]{
     color: var(--color-default);
     border: none;
     border-radius: .3rem;
+}
+
+@media (max-width: 1200px){
+    #secao-projetos ul{
+        flex-direction:column
+    }
+
+}
+@media (max-width: 800px){
+    .large-only{
+        display:none;
+    }
+
 }
