@@ -76,16 +76,16 @@
             <li class="card">
                 <div class="card-image"><img src="./assets/images/gundam.jfif" alt=""></div>
                 <div class="card-info">
-                    <h2>Gundam</h2>
-                    <h3>Eclipse</h3>
+                    <h3>Gundam</h3>
+                    <h4>Eclipse</h4>
                     <p></p>
                 </div>
             </li>
             <li class="card">
-                <div class="card-image"><img src="" alt=""></div>
+                <div class="card-image"><img src="./assets/images/colec.png" alt=""></div>
                 <div class="card-info">
-                    <h3></h3>
-                    <h4></h4>
+                    <h3>Coleção Gunpla</h3>
+                    <h4>Customs e Originais</h4>
                     <p></p>
                 </div>
             </li>
@@ -95,31 +95,33 @@
 
     <section id="secao-orcamento">
         <form action="">
-            <h2>Orçamento</h2>
-            <label for="Qtd dados">Quantidade de dados a serem passsadas para a AWS: (em Mb)</label>
-            <input type="number" id="QtdDados">
+            <h3>Orçamento:</h3>
 
-            <label for="SH">Sistema Hibrido?</label>
-            <input type="checkbox" id="SH">
+            <label for="qtde">Qtde de dados: (em kb)</label>
+            <input type="number" id="qtde" min="1" value="1">
 
-            <label for="DB">Banco de dado auto gerido, serverless ou gestão como serviço?</label>
+            <label for="telemetria">Precisa de telemetria complexa?</label>
+            <input type="checkbox" id="telemetria">
+
+            <label for="mangDB">Precisa que manegem o DB?</label>
             <div>
-                <input type="radio" id="AutoGerido" name="DB">
-                <label for="Autogerido">Auto Gerido:</label>
+                <input type="radio" id="serverless" name="mangDB">
+                <label for="serverless">Sim, serverless</label>
 
-                <input type="radio"  id="Servless" name="DB">
-                <label for="servless">Serverless:</label>
+                <input type="radio" id="mang_sim" name="mangDB">
+                <label for="mang_sim">Sim</label>
 
-                <input type="radio" id="Ctrl3" name="DB">
-                <label for="Ctrl3">Gestão como serviço:</label> 
+                <input type="radio" id="mang_não" name="mangDB">
+                <label for="mang_não">Não</label>
             </div>
-            
-            <label for="prazo" id="label_prazo">Prazo:</label>
-            <input type="range" id="prazo" min="1" max="12">
-            
-            <output id="output">R$100,00</output>
+
+            <label for="prazo" id="label_prazo">Prazo</label>
+            <input type="range" id="prazo" min="1" max="10">
+
+            <output id="output">R$ 100,00</output>
         </form>
     </section>
+
         <script src="./assets/js/script.js"></script>
         <script src="./assets/js/menu.js"></script>
 
